@@ -16,5 +16,6 @@ export default defineConfig({
       },
     }),
   ],
-  site: "https://astro-test.netlify.app",
+  site: 'https://anggie2020.github.io',
+  base: '/mi-portafolio/'
 });
