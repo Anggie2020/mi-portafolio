@@ -1,7 +1,6 @@
 ---
 import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
-import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
@@ -38,7 +37,7 @@ const menuitems = [
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
-            menuitems.map((item, index) => (
+            menuitems.map((item) => (
               <li>
                 <a
                   href={
