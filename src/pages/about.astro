@@ -1,0 +1,44 @@
+---
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import AboutMe from "assets/aboutMe.png";
+---
+
+<Layout title="Sobre mi">
+  <Container>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Frontend Developer <br /><span class="text-green-500">+ 2 años de experiencia</span>
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Soy una desarrolladora frontend apasionada por crear soluciones web
+        modernas, funcionales y visualmente atractivas. Con más de 2 años de
+        experiencia como freelancer, he trabajado en proyectos desafiantes que
+        abarcan desde aplicaciones médicas hasta sistemas de gestión. <br /> Me
+        destaco por mi creatividad, proactividad y capacidad de aprendizaje
+        continuo, siempre buscando soluciones innovadoras y eficaces. Además de
+        dominar tecnologías como Vue.js, Tailwind CSS, Node.js y PHP, poseo
+        habilidades blandas clave como el trabajo en equipo, la resolución de
+        problemas y la adaptabilidad, lo que me permite integrarme fácilmente en
+        equipos multidisciplinarios y entregar resultados sobresalientes. Mi
+        objetivo es seguir aprendiendo y contribuir al desarrollo de proyectos que
+        impacten positivamente la vida de las personas.
+      </p>
+    </div>
+    
+    <!-- Contenedor de la imagen -->
+    <div class="flex justify-center items-center mt-8">
+      <Picture
+        src={AboutMe}
+        alt="Astronaut in the air"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 800px) 100vw, 620px"
+        loading="eager"
+        format="avif"
+        class="rounded-full shadow-lg w-40 h-40 object-cover"
+      />
+    </div>
+    
+  </Container>
+</Layout>

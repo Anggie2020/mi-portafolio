@@ -1,0 +1,57 @@
+---
+import { Picture } from "astro:assets";
+import profileMine from "assets/profile.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24"
+>
+  <div class="py-6 md:order-1 hidden md:block" style="width: 50%;">
+    <Picture
+      src={profileMine}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter"
+    >
+      Anggie Castellanos <span class="text-violet-500">
+        Frontend Developer
+      </span>
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      Desarrolladora frontend apasionada por crear interfaces atractivas,
+      funcionales y responsivas. Me apasiona combinar creatividad y tecnología
+      para construir experiencias web memorables.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="/CV_Anggie.pdf"
+        download="Anggie_CV.pdf"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener noreferrer"
+      >
+        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+        Descargar CV
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/Anggie2020"
+        class="flex gap-1 items-center justify-center"
+        target="_blank"
+      >
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+        GitHub Repo
+      </Link>
+    </div>
+  </div>
+</main>

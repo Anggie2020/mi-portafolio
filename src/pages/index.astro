@@ -1,0 +1,45 @@
+---
+import Container from "@components/container.astro";
+import Steps from "@components/steps.astro";
+import Hero from "@components/hero.astro";
+import Logos from "@components/logos.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="">
+  <Container>
+    <Hero />
+    <Steps
+      id="resume"
+      title="Experiencia Laboral"
+      items={[
+        {
+          title:
+            'Desarrollo Frontend <br /> <span class="font-normal">DuoCare</span> <br /> <span class="text-sm font-normal">2023 - Presente</span>',
+          description: `Diseñé e implementé funcionalidades clave, como la programación automatizada de citas, gestión de pacientes, médicos, medicamentos, métricas y recordatorios automáticos por IVR. Colaboré en un entorno ágil utilizando principios SOLID, GitHub y prácticas CI/CD para despliegues eficientes.`,
+          icon: "tabler:briefcase",
+        },
+        {
+          title:
+            'Desarrolladora Web <br /> <span class="font-normal">Sistema de Gestión de Aparcamientos Privados UTS</span> <br /> <span class="text-sm font-normal">18/11/2022 - 20/02/2023</span>',
+          description: `Implementé una interfaz administrativa para la gestión y seguimiento de vehículos, facilitando la operación y el análisis de datos. Colaboré en un entorno ágil, aplicando buenas prácticas de desarrollo y diseño con Laravel y Bootstrap.`,
+          icon: "tabler:briefcase",
+        },
+        {
+          title:
+            'Desarrollo Frontend <br /> <span class="font-normal">Inventariado</span> <br /> <span class="text-sm font-normal">2022</span>',
+          description: `Desarrollé una aplicación web para la gestión de inventarios en un entorno ERP, implementando páginas clave como la landing page de inicio de sesión y la exposición de productos. Brindé soporte en el frontend, asegurando interfaces funcionales y diseño responsivo.`,
+          icon: "tabler:briefcase",
+        },
+        {
+          title:
+            'Desarrollo Frontend <br /> <span class="font-normal">Plataforma Web Educativa</span> <br /> <span class="text-sm font-normal">05/02/2021 - 07/12/2021</span>',
+          description: `Diseñé e implementé una plataforma web moderna y funcional, transformando la gestión de la información académica y mejorando la eficiencia operativa de la institución. Apliqué la arquitectura MVC y gestioné el proyecto utilizando la metodología Waterfall.`,
+          icon: "tabler:briefcase",
+        },
+      ]}
+      classes={{ container: "max-w-3xl" }}
+    />
+    <Logos/>
+  </Container>
+</Layout>
