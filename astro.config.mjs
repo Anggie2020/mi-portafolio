@@ -18,5 +18,5 @@ export default defineConfig({
   ],
   output: 'static',
   site: 'https://anggie2020.github.io',
-  base: '/mi-portafolio/'
+  base: '/'
 });
