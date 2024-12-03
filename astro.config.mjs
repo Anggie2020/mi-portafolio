@@ -6,7 +6,6 @@ import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
 
 export default defineConfig({
-  output: 'static',
   integrations: [
     tailwind(),
     mdx(),
@@ -17,6 +16,7 @@ export default defineConfig({
       },
     }),
   ],
+  output: 'static',
   site: 'https://anggie2020.github.io',
   base: '/mi-portafolio/'
 });
